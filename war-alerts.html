@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>War Alert System</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        nav { background-color: #333; padding: 10px; text-align: center; }
+        nav a { color: white; padding: 14px 20px; text-decoration: none; display: inline-block; }
+        nav a:hover { background-color: #ddd; color: black; }
+        .container { padding: 20px; }
+        button { padding: 10px 20px; font-size: 16px; }
+        iframe { width: 100%; height: 600px; }
+        .alert-map { height: 500px; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="https://timesofindia.indiatimes.com/world" target="_blank">Times of India - World News</a>
+        <a href="https://news.google.com/news/rss/headlines?hl=en-IN&gl=IN&ceid=IN:en" target="_blank">Google News - War Alerts</a>
+        <a href="https://www.bbc.com/news/world" target="_blank">BBC World News</a>
+        <a href="https://edition.cnn.com/world" target="_blank">CNN World News</a>
+        <a href="https://www.aljazeera.com/where/" target="_blank">Al Jazeera - War News</a>
+        <a href="map-view.html" target="_blank">Map View</a>
+        <a href="sos.html" target="_blank">SOS Button</a>
+        <a href="report-incident.html" target="_blank">Report Incident</a>
+    </nav>
+
+    <div class="container" id="real-time-alerts">
+        <h2>Real-time War Alerts</h2>
+        <p>Stay updated with the latest news about ongoing wars:</p>
+        <p><a href="https://timesofindia.indiatimes.com/world" target="_blank">Times of India - World News</a></p>
+        <p><a href="https://news.google.com/news/rss/headlines?hl=en-IN&gl=IN&ceid=IN:en" target="_blank">Google News - War Alerts</a></p>
+        <p><a href="https://www.bbc.com/news/world" target="_blank">BBC World News</a></p>
+        <p><a href="https://edition.cnn.com/world" target="_blank">CNN World News</a></p>
+        <p><a href="https://www.aljazeera.com/where/" target="_blank">Al Jazeera - War News</a></p>
+    </div>
+
+    <div class="container" id="map-view">
+        <h2>Alert Zone Map</h2>
+        <p><a href="https://www.google.com/maps" target="_blank">Click here to view the Map</a></p>
+        <div class="alert-map" id="map">
+            <p><strong>Red Zone (Danger): Location A</strong></p>
+            <p><strong>Yellow Zone (Caution): Location B</strong></p>
+            <p><strong>Green Zone (Safe): Location C</strong></p>
+        </div>
+    </div>
+
+    <div class="container" id="sos">
+        <button onclick="sendSOS()">Send SOS Alert</button>
+    </div>
+
+    <div class="container" id="report-incident">
+        <h2>Report an Incident</h2>
+        <form action="report-incident.html" method="get" target="_blank">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="details">Details:</label>
+            <textarea id="details" name="details" required></textarea>
+
+            <button type="submit">Report Incident</button>
+        </form>
+    </div>
+
+    <script>
+        function sendSOS() {
+            alert("Emergency Alert Sent! Help is on the way.");
+            window.open('https://www.sosalert.com', '_blank');
+        }
+    </script>
+
+</body>
+</html>
